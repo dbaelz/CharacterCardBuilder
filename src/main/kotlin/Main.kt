@@ -11,7 +11,15 @@ import kotlin.uuid.ExperimentalUuidApi
 import kotlin.uuid.Uuid
 
 @OptIn(ExperimentalUuidApi::class)
-fun main() {
+fun main(args: Array<String>) {
+    if (args.isEmpty()) {
+        println("Usage: java -jar CharacterCardBuilder.jar <characterDescription>")
+        return
+    }
+
+    // Join all args in case user entered them with spaces instead of using quotes
+    val characterDescription = args.joinToString(" ")
+    
     val agent = AIAgent(
         executor = simpleOllamaAIExecutor(),
         systemPrompt = "You are an ai assistant to create character cards for role-play chat systems. " +
@@ -38,7 +46,7 @@ fun main() {
     }
 
     runBlocking {
-        agent.run("Create a character card for the historical character 'Ada Lovelace'")
+        agent.run("Create a character card for the character. Description of the character: '$characterDescription'")
     }
 }
 
