@@ -1,0 +1,5 @@
+[versions]
+koog-agents = "0.2.1"
+
+[libraries]
+koog-agents = { group = "ai.koog", name = "koog-agents", version.ref = "koog-agents" }
