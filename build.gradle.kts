@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "2.1.20"
+    application
 }
 
 group = "de.dbaelz"
@@ -10,6 +11,7 @@ repositories {
 }
 
 dependencies {
+    implementation(libs.guava)
     implementation(libs.koog.agents)
 
     testImplementation(kotlin("test"))
@@ -18,6 +20,12 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
 kotlin {
     jvmToolchain(17)
+}
+
+application {
+    // Define the main class for the application.
+    mainClass = "de.dbaelz.ccb.MainKt"
 }

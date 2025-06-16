@@ -26,7 +26,7 @@ fun main(args: Array<String>) {
                 "Use the following template: $CHARACTER_CARD_TEMPLATE",
         llmModel = LLModel(
             provider = LLMProvider.Ollama,
-            id = "qwen3:8b",
+            id = MODEL,
             capabilities = listOf(
                 LLMCapability.Temperature,
                 LLMCapability.Schema.JSON.Simple,
@@ -49,6 +49,8 @@ fun main(args: Array<String>) {
         agent.run("Create a character card for the character. Description of the character: '$characterDescription'")
     }
 }
+
+private const val MODEL = "qwen3:8b"
 
 private const val CHARACTER_CARD_TEMPLATE = """
 character_card = [

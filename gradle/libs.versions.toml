@@ -1,5 +1,7 @@
 [versions]
+guava = "33.2.1-jre"
 koog-agents = "0.2.1"
 
 [libraries]
+guava = { module = "com.google.guava:guava", version.ref = "guava" }
 koog-agents = { group = "ai.koog", name = "koog-agents", version.ref = "koog-agents" }
