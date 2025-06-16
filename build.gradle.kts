@@ -13,7 +13,8 @@ repositories {
 dependencies {
     implementation(libs.guava)
     implementation(libs.koog.agents)
-
+    implementation(libs.clikt)
+    
     testImplementation(kotlin("test"))
 }
 

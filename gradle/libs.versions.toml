@@ -1,7 +1,9 @@
 [versions]
 guava = "33.2.1-jre"
 koog-agents = "0.2.1"
+clikt = "5.0.3"
 
 [libraries]
 guava = { module = "com.google.guava:guava", version.ref = "guava" }
 koog-agents = { group = "ai.koog", name = "koog-agents", version.ref = "koog-agents" }
+clikt = { module = "com.github.ajalt.clikt:clikt", version.ref = "clikt" }
