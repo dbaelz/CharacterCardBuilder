@@ -1,4 +1,4 @@
-package de.dbaelz
+package de.dbaelz.ccb
 
 import ai.koog.agents.core.agent.AIAgent
 import ai.koog.agents.features.eventHandler.feature.handleEvents
