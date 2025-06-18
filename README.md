@@ -5,15 +5,20 @@ The tool uses a local Ollama instance to build character cards that can be used 
 ## Requirements
 The project is a demo and work in progress. It requires the following environment:
 - A running local Ollama instance to connect to
-- Qwen3 8b model available with Ollama (or change [MODEL constant in Main.kt](src/main/kotlin/de/dbaelz/ccb/Main.kt))
+- Model available with Ollama. The default is `qwen3:8b` (see [Config.kt](src/main/kotlin/de/dbaelz/ccb/command/Config.kt)), but can be changed with an arg
 
-## How to use
-1. Run the application and provide the character description as an argument. For example: `./gradlew run --args="'Ada Lovelace'"`
-2. Add the name or a description of the character as one argument in quotes or as multiple arguments
+## How to use: prompt command
+The prompt command uses a single prompt to generate the character card. Run the application and provide the description `./gradlew run --args="prompt 'Ada Lovelace'"`
 
-### Example Arguments
+Example Arguments for prompt command:
 - Name of the character. Works best with historical characters: `"Ada Lovelace"` or `"Historical character Ada Lovelace"`
 - You can also describe the character: `"A fictional character named John Doe. He is a 42 years old software developer who is passionate about AI. 170 cm height, brown hair and blue eyes."`
+
+## Addition arguments and options
+All additional arguments and options can be listed with the `--help` (run `./gradlew run --args="--help"`)
+- `--verbose`: Verbose output
+- `--model`/`-m`: Specify the model to use. E.g. `./gradlew run --args="--model 'mymodel:latest' prompt 'Ada Lovelace'"`
+
 
 ## Contribution
 Feel free to contribute via pull requests.
