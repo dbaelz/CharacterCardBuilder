@@ -13,7 +13,7 @@ class WorkflowCmd : CliktCommand(name = "workflow") {
         }
 
         // TODO: Add workflow to ask for information about the character
-
+        echo("WIP: Not implemented yet")
     }
 
 }

@@ -14,6 +14,9 @@ Example Arguments for prompt command:
 - Name of the character. Works best with historical characters: `"Ada Lovelace"` or `"Historical character Ada Lovelace"`
 - You can also describe the character: `"A fictional character named John Doe. He is a 42 years old software developer who is passionate about AI. 170 cm height, brown hair and blue eyes."`
 
+## How to use: workflow command (WIP)
+The workflow command guides the user through a workflow to get the required information for the character. Currently WIP and not fully implemented. Example: `./gradlew run --args="workflow"`
+
 ## Addition arguments and options
 All additional arguments and options can be listed with the `--help` (run `./gradlew run --args="--help"`)
 - `--verbose`: Verbose output
