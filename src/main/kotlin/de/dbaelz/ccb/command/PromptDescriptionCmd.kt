@@ -13,7 +13,7 @@ class PromptDescriptionCmd() : CliktCommand(name = "prompt") {
         help = "The description of the character"
     )
 
-    val config by requireObject<Config>()
+    private val config by requireObject<Config>()
 
     override fun run() {
         if (config.verbose) {
